@@ -1,17 +1,12 @@
 {
-  "started_at": "2026-10-10T18:35:56Z",
-  "duration_seconds": 0.97,
+  "started_at": "2026-10-10T18:36:35Z",
+  "duration_seconds": 0.26,
   "catalogue_pages": 3,
-  "urls_discovered": 61,
+  "urls_discovered": 60,
   "pages_fetched": 0,
   "cache_hits": 63,
   "valid_records": 60,
   "invalid_records": 0,
-  "failed_pages": 1,
-  "failed": [
-    {
-      "url": "https://books.toscrape.com/catalogue/not-a-real-book_0/index.html",
-      "error": "HTTP 404 for https://books.toscrape.com/catalogue/not-a-real-book_0/index.html"
-    }
-  ]
+  "failed_pages": 0,
+  "failed": []
 }

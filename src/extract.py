@@ -17,7 +17,7 @@ def extract_book(html: str, product_url: str, source_page: str, fetched_at: str)
     desc_p = desc.find_next_sibling("p") if desc else None
     rating_text = next((c for c in (rating.get("class", []) if rating else []) if c in RATINGS), None)
     return {
-        "title": title.get_text(strip=True) if title else None,
+        "title": " ".join(title.get_text().split()) if title else None,
         "product_url": product_url,
         "price_text": price.get_text(strip=True) if price else None,
         "availability_text": " ".join(avail.get_text().split()) if avail else None,
