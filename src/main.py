@@ -1,7 +1,6 @@
-from fetcher import fetch, cache_path
-
-START = "https://books.toscrape.com/catalogue/page-1.html"
+from crawl import discover
 
 if __name__ == "__main__":
-    html, source = fetch(START)
-    print(f"{source} {START} -> {cache_path(START).name} ({len(html)} chars)")
+    pages, urls, source_of, stats = discover()
+    print(f"catalogue_pages={len(pages)} discovered={len(urls)} unique_urls={len(set(urls))} "
+          f"fetched={stats['FETCH']} cache_hits={stats['CACHE HIT']}")
